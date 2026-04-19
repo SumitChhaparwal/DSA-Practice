@@ -1,18 +1,23 @@
 //Count 1s in sorted array using binary search..
-arr = [0, 0, 0, 0, 0, 1, 1];
+arr = [0, 0, 0, 0, 1, 1, 1];
 let left = 0;
+let firstIndex = 0;
 let right = arr.length;
 function countValue() {
   while (left < right) {
     let mid = left + Math.floor((right - left) / 2);
     if (arr[mid] === 1) {
-      right = mid;
-      return arr.length - mid;
+      mid--;
+      right--;
+      if (arr[mid] !== arr[mid + 1]) {
+        right = mid;
+        firstIndex = mid + 1;
+        return arr.length - firstIndex;
+      }
     } else {
       left++;
     }
   }
-  return count;
 }
 
 let result = countValue();
