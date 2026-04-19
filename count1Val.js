@@ -1,3 +1,4 @@
+//Count 1s in sorted array using binary search..
 arr = [0, 0, 0, 0, 0, 1, 1];
 let left = 0;
 let right = arr.length;
