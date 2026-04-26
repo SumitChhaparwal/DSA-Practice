@@ -1,14 +1,15 @@
+//Insertion Sort..
 let arr = [36, 0, 2, 1, 34, 6];
 
 function inSort() {
-  for (i = 0; i < arr.length; i++) {
-    for (j = 0; j < i; j++) {
-      let keyEle = arr[i];
-      if (arr[j] > keyEle) {
-        arr[i] = arr[j];
-        arr[j] = keyEle;
-      }
+  for (let i = 1; i < arr.length; i++) {
+    let keyEle = arr[i];
+    let j = i - 1;
+    while (j >= 0 && arr[j] > keyEle) {
+      arr[j + 1] = arr[j];
+      j--;
     }
+    arr[j + 1] = keyEle;
   }
   return arr;
 }
