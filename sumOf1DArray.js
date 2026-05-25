@@ -17,8 +17,8 @@ console.log("1. sum of 1d array: ", sum);
 //Approach 2
 let sum1 = new Array(nums.length);
 sum1[0] = nums[0];
-for(let i=1; i<nums.length; i++) {
-  sum1[i] = sum1[i-1] + nums[i];
+for(let i=1; i<nums.length; i++) { 
+  sum1[i] = sum[i-1] + nums[i];
 }
 console.log("2. sum of 1d array: ", sum1);
 
